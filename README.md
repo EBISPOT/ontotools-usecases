@@ -83,19 +83,20 @@ Each use case is one file with the same parts:
 
 ## Where to start
 
-| I have … | I want … | Start with |
-|---|---|---|
-| a concept in words | its ontology term | [OLS-01](use-cases/ols/OLS-01-find-term-for-concept.md), or [OLS-07](use-cases/ols/OLS-07-semantic-search.md) if I do not know the wording |
-| an identifier | to know what it means | [OLS-02](use-cases/ols/OLS-02-look-up-identifier.md) |
-| an identifier | its equivalent in another vocabulary | [OXO-01](use-cases/oxo/OXO-01-find-equivalent-terms.md) |
-| many identifiers | their equivalents in another vocabulary | [OXO-02](use-cases/oxo/OXO-02-map-list-to-target.md) |
-| many free-text values | ontology terms | [ZOOMA-01](use-cases/zooma/ZOOMA-01-map-list-of-values.md), then [PAIR-01](use-cases/two-tools/PAIR-01-check-zooma-suggestions.md) |
-| many free-text values | codes of a coding system | [TRIO-01](use-cases/three-tools/TRIO-01-harmonise-free-text-to-codes.md) |
-| a passage of text | the terms mentioned in it | [OLS-06](use-cases/ols/OLS-06-tag-text.md) or [ZOOMA-04](use-cases/zooma/ZOOMA-04-annotate-free-text.md) |
-| a mapping I am unsure of | a reason to trust it or not | [OXO-04](use-cases/oxo/OXO-04-check-mapping-provenance.md), then [PAIR-03](use-cases/two-tools/PAIR-03-validate-a-mapping.md) |
-| a mapping I believe is wrong | to know who published it and where to report it | [OXO-08](use-cases/oxo/OXO-08-find-source-of-incorrect-mapping.md) |
-| old annotations | current ones | [TRIO-02](use-cases/three-tools/TRIO-02-update-outdated-annotations.md) |
-| two datasets annotated differently | one combined dataset | [TRIO-03](use-cases/three-tools/TRIO-03-combine-differently-annotated-datasets.md) |
+| if I have …                                         | and I want …                                    | start with                                                 |
+|-----------------------------------------------------|-------------------------------------------------|------------------------------------------------------------|
+| a concept in words                                  | its ontology term                               | [OLS-01](use-cases/ols/OLS-01-find-term-for-concept.md)    |
+ | a concept in mind without knowing the correct words | its ontology term                | [OLS-07](use-cases/ols/OLS-07-semantic-search.md)          |
+| an identifier                                       | to know what it means                           | [OLS-02](use-cases/ols/OLS-02-look-up-identifier.md)       |
+| an identifier                                       | its equivalent in another vocabulary            | [OXO-01](use-cases/oxo/OXO-01-find-equivalent-terms.md)    |
+| many identifiers                                    | their equivalents in another vocabulary         | [OXO-02](use-cases/oxo/OXO-02-map-list-to-target.md)       |
+| many free-text values                               | ontology terms                                  | [PAIR-01](use-cases/two-tools/PAIR-01-check-zooma-suggestions.md) |
+| many free-text values                               | codes of a coding system                        | [TRIO-01](use-cases/three-tools/TRIO-01-harmonise-free-text-to-codes.md) |
+| a passage of text                                   | the terms mentioned in it                       | [ZOOMA-04](use-cases/zooma/ZOOMA-04-annotate-free-text.md) |
+| a mapping I am unsure of                            | a reason to trust it or not                     | [PAIR-03](use-cases/two-tools/PAIR-03-validate-a-mapping.md) |
+| a mapping I believe is wrong                        | to know who published it and where to report it | [OXO-08](use-cases/oxo/OXO-08-find-source-of-incorrect-mapping.md) |
+| old annotations                                     | current ones                                    | [TRIO-02](use-cases/three-tools/TRIO-02-update-outdated-annotations.md) |
+| two datasets annotated differently                  | one combined dataset                            | [TRIO-03](use-cases/three-tools/TRIO-03-combine-differently-annotated-datasets.md) |
 
 ## Conventions used in the instructions
 
