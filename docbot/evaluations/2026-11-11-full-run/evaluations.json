@@ -1,0 +1,934 @@
+{
+  "1": {
+    "n": 1,
+    "id": "OLS-01",
+    "variant": "full",
+    "rating": "thumbs down",
+    "verdict": "fail",
+    "summary": "Answers the example, not the question: names myocardial infarction (MONDO:0005068) correctly but gives no procedure for finding a term for a concept.",
+    "correct": [
+      "myocardial infarction / MONDO:0005068 for heart attack",
+      "points to OLS"
+    ],
+    "gaps": [
+      "no search steps (Search OLS box, Enter)",
+      "no narrowing by Type = Class and Ontology",
+      "no advice to read definition and synonyms before using the term, nor to copy the identifier from the badge",
+      "no API search endpoint",
+      "nothing a user with a different concept can act on"
+    ],
+    "errors": [],
+    "comment": "11 November run, OLS-01: the example is right (myocardial infarction, MONDO:0005068) but the answer gives no method. The use case is how to find a term for any concept: type the phrase into Search OLS, narrow by Type = Class and by Ontology, read the result card (label, identifier badge, definition), open the term to confirm definition and synonyms; or use the API search endpoint with q, ontology and type=class. The 'Where to start' variant of this question got all of this right."
+  },
+  "2": {
+    "n": 2,
+    "id": "OLS-02",
+    "variant": "full",
+    "rating": "thumbs down",
+    "verdict": "partial",
+    "summary": "Correct label, definition and synonyms for the example identifier, but no lookup procedure for an identifier in general.",
+    "correct": [
+      "label myocardial infarction",
+      "definition quoted matches the use case",
+      "synonyms heart attack, MI",
+      "OLS for hierarchy/synonyms/cross-references; OxO for equivalents"
+    ],
+    "gaps": [
+      "does not say to paste the identifier into Search OLS and pick the defining ontology (Jump to entry with matching badge, or the result not marked IMPORTED)",
+      "no API call (terms?obo_id=...)",
+      "no mention of the identifier forms accepted (CURIE, underscore, IRI)",
+      "cites PAIR-03 as a source, which is unrelated"
+    ],
+    "errors": [],
+    "comment": "11 November run, OLS-02: the facts for MONDO:0005068 match the use case, but a user with a different identifier is not told how to look it up: paste it into Search OLS, open the Jump to entry whose ontology badge matches the prefix (or the result not marked IMPORTED), then read label, definition, synonyms, Class Information and Class Relations; API: /api/terms?obo_id=... and use the record with is_defining_ontology true. The 'Where to start' variant covered this correctly."
+  },
+  "3": {
+    "n": 3,
+    "id": "OLS-03",
+    "variant": "full",
+    "rating": "thumbs up",
+    "verdict": "partial",
+    "summary": "Example facts (parent, 14 children, 20 descendants, example children) all match the use case; points to the Tree panel but gives little method and no API.",
+    "correct": [
+      "one parent myocardial disorder MONDO:0024643",
+      "14 direct children incl. acute MI MONDO:0004781 and silent MI MONDO:0003678",
+      "20 descendants",
+      "Tree panel on the term page"
+    ],
+    "gaps": [
+      "no description of reading ancestors upward in the Tree, expanding children, Show counts, Show all siblings",
+      "no Graph view or Class Relations",
+      "no API endpoints (children, hierarchicalDescendants, hierarchicalAncestors) or pagination; offered only as a follow-up"
+    ],
+    "errors": [],
+    "comment": "11 November run, OLS-03: counts and identifiers match the use case and the Tree panel is the right pointer. Please add how to use it (read upwards for ancestors, expand for children, Show counts), the Graph view for other relationships, and the API endpoints children, hierarchicalDescendants and hierarchicalAncestors with pagination, rather than leaving the API to a follow-up."
+  },
+  "4": {
+    "n": 4,
+    "id": "OLS-04",
+    "variant": "full",
+    "rating": "thumbs up",
+    "verdict": "pass",
+    "summary": "Accurate: Ontologies page, category and text filters, where scope, version, size and licence are shown, and the two API calls with the right fields.",
+    "correct": [
+      "Ontologies page and filters",
+      "Description, Version / Version IRI, Classes/Properties/Individuals tabs, License under Ontology Information",
+      "v2/ontologies?search and api/ontologies/{id} with config.* and numberOf* fields and updated"
+    ],
+    "gaps": [
+      "Last loaded date on the page not mentioned",
+      "Imports from / Exports to and the Homepage, Mailing List, Issue Tracker buttons not mentioned"
+    ],
+    "errors": [],
+    "comment": "11 November run, OLS-04: accurate against the use case for finding ontologies and inspecting scope, version, size and licence on the website and via the API. Minor additions: the Last loaded date under Ontology Information, and Imports from / Exports to."
+  },
+  "5": {
+    "n": 5,
+    "id": "OLS-05",
+    "variant": "full",
+    "rating": "thumbs up",
+    "verdict": "pass",
+    "summary": "Identical to the 9 November answer; accurate on Include obsolete terms, the deprecated box, term replaced by, API fields and the OxO/Zooma fallback.",
+    "correct": [
+      "Include obsolete terms",
+      "red deprecated box",
+      "term replaced by under Class Information, Reason",
+      "is_obsolete and term_replaced_by via API",
+      "OxO/Zooma when no replacement is recorded"
+    ],
+    "gaps": [
+      "does not say to check the replacement's definition before switching"
+    ],
+    "errors": [],
+    "comment": "11 November run, OLS-05: accurate, unchanged from 9 November. Minor improvement: say to check the replacement's definition before switching to it."
+  },
+  "6": {
+    "n": 6,
+    "id": "OLS-06",
+    "variant": "full",
+    "rating": "thumbs up",
+    "verdict": "partial",
+    "summary": "Correct tool (Tag Text), correct inputs and result columns, and a correct contrast with Zooma Annotate Text; omits the ontology filter, match-length controls, CSV download and API.",
+    "correct": [
+      "Tag Text page, paste/type/drag a file, tags automatically",
+      "Matched Terms columns incl. Match Type",
+      "OLS for every match vs Zooma for one ranked suggestion per phrase"
+    ],
+    "gaps": [
+      "Ontologies panel to keep only chosen ontologies (the main way to get one answer per match)",
+      "Min match length and Include substrings",
+      "Download CSV",
+      "tag_text API and its looser defaults"
+    ],
+    "errors": [],
+    "comment": "11 November run, OLS-06: right tool and workflow. Please add the Ontologies panel (tick ontologies, reorder, exclude) since the example yields 30 matches across ontologies without it, the Min match length and Include substrings controls, Download CSV, and the v2/tag_text API with minLength and includeSubstrings set explicitly."
+  },
+  "7": {
+    "n": 7,
+    "id": "OLS-07",
+    "variant": "full",
+    "rating": "thumbs up",
+    "verdict": "partial",
+    "summary": "Correct answer (Tinnitus HP:0000360) and correct embedding-search steps; omits the caveat that scores are uncurated and the definition must be checked.",
+    "correct": [
+      "Tinnitus HP:0000360",
+      "Search Model -> embedding model llama-embed-nemotron-8b_pca512 instead of Lexical",
+      "ranked results"
+    ],
+    "gaps": [
+      "no caveat that similarity scores are not a judgement of correctness and the definition must be read",
+      "no Filter by ontology, Similar Classes, or API (llm_models, llm_search)"
+    ],
+    "errors": [],
+    "comment": "11 November run, OLS-07: correct result and steps. Please add the use case's caveat that embedding results are uncurated and the definition must be checked before a term is used, plus Filter by ontology in the blue bar and the llm_search API. The 'Where to start' variant included the caveat."
+  },
+  "8": {
+    "n": 8,
+    "id": "OLS-08",
+    "variant": "full",
+    "rating": "thumbs up",
+    "verdict": "pass",
+    "summary": "Accurate and complete: childrenOf on select/search, single URL-encoding, the exact example call, allChildrenOf, type=class, obsoletes=true, and that the website has no branch filter.",
+    "correct": [
+      "childrenOf with branch IRI MONDO_0005267",
+      "URL-encode once",
+      "select for autocomplete, search for results pages",
+      "example curl identical to the use case",
+      "allChildrenOf for part-of",
+      "type=class, obsoletes=true",
+      "no branch filter on the website; use Tree"
+    ],
+    "gaps": [
+      "store obo_id/iri rather than the label; response.docs fields"
+    ],
+    "errors": [],
+    "comment": "11 November run, OLS-08: accurate against the use case, including the example call, the single URL-encoding, allChildrenOf and the website limitation. Minor addition: read response.docs and store the obo_id or IRI of the chosen suggestion, not the label."
+  },
+  "9": {
+    "n": 9,
+    "id": "OLS-09",
+    "variant": "full",
+    "rating": "thumbs up",
+    "verdict": "pass",
+    "summary": "Accurate: MCP address, Streamable HTTP, no authentication, Claude Code example, the twelve tools, example prompt, verification advice and the embedding-model tools.",
+    "correct": [
+      "https://www.ebi.ac.uk/ols4/api/mcp, Streamable HTTP, none",
+      "claude mcp add example",
+      "twelve tools and names",
+      "confirm identifiers in OLS",
+      "listEmbeddingModels then searchClassesWithEmbeddingModel with can_embed"
+    ],
+    "gaps": [
+      "MCP Server page in the OLS menu not mentioned"
+    ],
+    "errors": [],
+    "comment": "11 November run, OLS-09: accurate against the use case on server address, transport, authentication, tools and verification. Minor addition: the MCP Server page in the OLS menu lists the address and tools."
+  },
+  "33": {
+    "n": 33,
+    "id": "OLS-01",
+    "variant": "where-to-start",
+    "rating": "thumbs up",
+    "verdict": "pass",
+    "summary": "Full and accurate procedure: search box, Type = Class, Ontology filter, result cards, confirm definition and synonyms, semantic search as alternative.",
+    "correct": [
+      "Search OLS box, Enter",
+      "Type Class, Ontology e.g. MONDO",
+      "result cards: label, identifier, definition, ontology",
+      "confirm definition and synonyms",
+      "embedding model for unknown wording"
+    ],
+    "gaps": [
+      "no API call (acceptable for a where-to-start answer)"
+    ],
+    "errors": [],
+    "comment": "11 November run, OLS-01 (where to start): accurate and complete for the website; this is the method the full OLS-01 question should also receive."
+  },
+  "34": {
+    "n": 34,
+    "id": "OLS-07",
+    "variant": "where-to-start",
+    "rating": "thumbs up",
+    "verdict": "pass",
+    "summary": "Accurate embedding-search steps with the uncurated-results caveat.",
+    "correct": [
+      "Search Model -> embedding model",
+      "similarity score shown",
+      "always read the definition; results not curated"
+    ],
+    "gaps": [
+      "Filter by ontology and Similar Classes not mentioned"
+    ],
+    "errors": [],
+    "comment": "11 November run, OLS-07 (where to start): accurate, including the caveat that results are uncurated."
+  },
+  "35": {
+    "n": 35,
+    "id": "OLS-02",
+    "variant": "where-to-start",
+    "rating": "thumbs up",
+    "verdict": "pass",
+    "summary": "Accurate: identifier forms, Jump to with matching ontology badge or the non-IMPORTED result, what to read on the page, API call.",
+    "correct": [
+      "CURIE / underscore / IRI forms",
+      "Jump to, matching badge, not IMPORTED",
+      "label, definition, synonyms, cross-references, relations",
+      "api/terms?obo_id="
+    ],
+    "gaps": [
+      "use the record with is_defining_ontology true when several ontologies return the term"
+    ],
+    "errors": [],
+    "comment": "11 November run, OLS-02 (where to start): accurate against the use case. Minor addition for the API: pick the record with is_defining_ontology true."
+  },
+  "10": {
+    "n": 10,
+    "id": "OXO-01",
+    "variant": "full",
+    "rating": "thumbs up",
+    "verdict": "pass",
+    "summary": "Accurate website and API procedure with the right target prefixes (MESH, ICD10CM, SCTID) and sound advice to prefer asserted exact matches.",
+    "correct": [
+      "Which term do you want to map? field, To ontologies, Search",
+      "prefixes ICD10CM, MESH, SCTID",
+      "prefer Asserted + SKOS:exactMatch; copy or download",
+      "POST mappings/search with queries, objectPrefixes, groupBySpo; fields incl. inference_type"
+    ],
+    "gaps": [
+      "meaning of the other columns (Predicate kinds, Mapping justification, Distance, Mapping set) not explained",
+      "eye icon to Mapping Details and OLS link not mentioned",
+      "label matching must be complete, and labels can belong to several ontologies"
+    ],
+    "errors": [],
+    "comment": "11 November run, OXO-01: accurate against the use case for website and API, including the target prefixes and preferring asserted exact matches. Additions worth making: what Predicate, Mapping justification, Distance and Mapping set tell the user, the eye icon for Mapping Details, and that a label must match completely (Partial match under More options)."
+  },
+  "11": {
+    "n": 11,
+    "id": "OXO-02",
+    "variant": "full",
+    "rating": "thumbs up",
+    "verdict": "pass",
+    "summary": "Accurate: Multiple terms mode, file upload, To ontologies, Asserted only filter, SSSOM download, Subject-column comparison, and the batch-map API with unmappedInputs.",
+    "correct": [
+      "Multiple terms; paste or upload .txt/.csv/.tsv",
+      "To ontologies target, From empty",
+      "Type -> Asserted only",
+      "download SSSOM; compare Subject column to find unmapped",
+      "batch-map API: terms, objectPrefixes, inferenceType optional; summary and unmappedInputs"
+    ],
+    "gaps": [
+      "direction caveat: from a coding system into an ontology, Asserted only leaves nothing and Max distance 1 should be used instead",
+      "use identifiers rather than labels in a batch",
+      "re-run without Asserted only for leftovers; format=sssom-tsv; 1,000-term limit"
+    ],
+    "errors": [],
+    "comment": "11 November run, OXO-02: accurate against the use case, including unmappedInputs. Please add the direction caveat (mappings are stored in the published direction, so from ICD-10-CM into Mondo use Max distance 1 rather than Asserted only), and that batches should use identifiers, not labels."
+  },
+  "12": {
+    "n": 12,
+    "id": "OXO-03",
+    "variant": "full",
+    "rating": "thumbs up",
+    "verdict": "pass",
+    "summary": "Accurate: empty term box, From/To, download as SSSOM, the exact API command for the file, and the folding explanation for row/line count differences.",
+    "correct": [
+      "empty term box, From DOID, To EFO, Search, download oxo2-mappings.tsv",
+      "format=sssom-tsv API command identical to the use case",
+      "table folds identical mappings; file is not folded"
+    ],
+    "gaps": [
+      "direction matters and the swap button",
+      "results include OxO inferences (mapping set oxo2/inferences)",
+      "JSON paging and forSubject API not mentioned"
+    ],
+    "errors": [],
+    "comment": "11 November run, OXO-03: accurate against the use case, including the folding explanation. Additions: direction matters (use the swap button for the reverse), and the result includes inferred mappings from the oxo2/inferences set."
+  },
+  "13": {
+    "n": 13,
+    "id": "OXO-04",
+    "variant": "full",
+    "rating": "thumbs up",
+    "verdict": "pass",
+    "summary": "Identical to the 9 November answer; accurate on asserted vs inferred, Mapping Details sections, Inference Details, judging by the weakest premise and fitness for purpose.",
+    "correct": [
+      "Asserted vs SSSOM inference",
+      "eye icon -> Mapping Details: Provenance, Mapping Set, Justification and confidence",
+      "Inference Details: Asserted Mappings and Explanation graph",
+      "weakest-ingredient judgement",
+      "exact match is the publisher's claim"
+    ],
+    "gaps": [
+      "Distance column as a quick indicator",
+      "API by mapping_id with asserted_mappings and explanation"
+    ],
+    "errors": [],
+    "comment": "11 November run, OXO-04: accurate, unchanged from 9 November. Minor additions: Distance as a quick indicator of how many ontologies an inference passes through, and the sssom/mappings/{mapping_id} API with asserted_mappings and explanation."
+  },
+  "14": {
+    "n": 14,
+    "id": "OXO-05",
+    "variant": "full",
+    "rating": "thumbs up",
+    "verdict": "pass",
+    "summary": "Accurate column filters (Type, Predicate, Mapping justification, Distance, Object), clear-filter behaviour, and the matching API fields.",
+    "correct": [
+      "Type -> Asserted only",
+      "Predicate filter with exactMatch",
+      "Mapping justification -> ManualMappingCuration",
+      "Max distance 1 meaning",
+      "Object prefix filter; coloured dot; Clear",
+      "API inferenceType and columnFilters for predicate_id and mapping_justification"
+    ],
+    "gaps": [
+      "More options -> Where should mappings come from? (Ontologies / Curated sets / Both) and Choose specific mapping sets; API mappingSetCategory and mappingSetIds",
+      "direction caveat for Asserted only",
+      "download honours the filters (left to a follow-up)"
+    ],
+    "errors": [],
+    "comment": "11 November run, OXO-05: accurate against the use case for the column filters and the API fields. Please add the source-kind choice under More options (Ontologies / Curated sets / Both, or specific mapping sets) and the caveat that Asserted only depends on direction."
+  },
+  "15": {
+    "n": 15,
+    "id": "OXO-06",
+    "variant": "full",
+    "rating": "thumbs up",
+    "verdict": "pass",
+    "summary": "Accurate: what OxO hides by default, the three Also show options under More options, and the direction, label-matching and prefix checks.",
+    "correct": [
+      "hides hasDbXref, subClassOf and obsolete terms by default",
+      "More options -> tick Cross-reference, Subclass, Obsolete terms",
+      "Label matching -> Partial match, or search by identifier",
+      "clear or swap From/To",
+      "check the prefix is known"
+    ],
+    "gaps": [
+      "caveat that a hasDbXref row only links identifiers and may not be an equivalence",
+      "API includeWeakPredicates / includeObsolete (left to a follow-up)",
+      "suggestion list follows the same settings"
+    ],
+    "errors": [],
+    "comment": "11 November run, OXO-06: accurate against the use case. Please add the caveat that a row with OBOINOWL:hasDbXref only says the source linked the two identifiers, not that they are equivalent, and the API fields includeWeakPredicates and includeObsolete."
+  },
+  "16": {
+    "n": 16,
+    "id": "OXO-07",
+    "variant": "full",
+    "rating": "thumbs up",
+    "verdict": "pass",
+    "summary": "Accurate: the two kinds of mapping set plus OxO's inference set, the picker under More options, set pages, and the mapping-sets and mappingSetIds API calls.",
+    "correct": [
+      "ontology cross-references from OLS and curated sets (Biomappings, MGI); inferences as a further set",
+      "ONTOLOGY / CURATED categories",
+      "Choose specific mapping sets picker; set page via the Mapping set column",
+      "GET mapping-sets, by-id?mappingSetId=, search with mappingSetIds"
+    ],
+    "gaps": [
+      "Data Content box and data-content API",
+      "downloading a set's mappings from its page"
+    ],
+    "errors": [],
+    "comment": "11 November run, OXO-07: accurate against the use case for sources, the picker, set pages and the API. Minor additions: the Data Content box on the home page and the download icon on a set's page."
+  },
+  "17": {
+    "n": 17,
+    "id": "OXO-08",
+    "variant": "full",
+    "rating": "thumbs up",
+    "verdict": "pass",
+    "summary": "Accurate tracing of asserted and inferred mappings to their source, correct reporting routes (project, OLS Issue Tracker for extracted cross-references, premise publisher) and report contents.",
+    "correct": [
+      "eye icon -> Mapping Details; Asserted vs SSSOM inference",
+      "Mapping Set section identifies the publisher",
+      "Inference Details -> Asserted Mappings; error lies in a premise; LexicalMatching suspicious",
+      "OLS extracted ... mappings -> Issue Tracker in OLS; web-address identifiers opened in a browser",
+      "what to include in a report; filter the mapping out meanwhile"
+    ],
+    "gaps": [
+      "rows marked Multiple sets must be expanded to reach each publisher",
+      "check whether the set has other mappings of the same kind",
+      "MappingChaining and confidence below 1 as further suspects",
+      "closing offer mentions Zooma, which plays no part here"
+    ],
+    "errors": [],
+    "comment": "11 November run, OXO-08: accurate against the use case on tracing and reporting. Additions: expand rows marked Multiple sets to reach each publisher, check the set for other mappings of the same kind before reporting, and treat MappingChaining or a confidence below 1 as suspects too. The closing offer to use Zooma is out of place here."
+  },
+  "36": {
+    "n": 36,
+    "id": "OXO-01",
+    "variant": "where-to-start",
+    "rating": "thumbs up",
+    "verdict": "pass",
+    "summary": "Correct tool and entry points, with the asserted-exact-match preference and the prefix note.",
+    "correct": [
+      "OxO term field and To ontologies",
+      "POST mappings/search",
+      "prefer Asserted + exactMatch; inspect inferences",
+      "SCTID and ICD10CM prefixes"
+    ],
+    "gaps": [],
+    "errors": [],
+    "comment": "11 November run, OXO-01 (where to start): accurate and appropriately brief."
+  },
+  "37": {
+    "n": 37,
+    "id": "OXO-02",
+    "variant": "where-to-start",
+    "rating": "thumbs up",
+    "verdict": "pass",
+    "summary": "Correct: Multiple terms mode, To ontologies, From empty, download, API reports unmapped inputs; sensible pointer to Zooma for free text.",
+    "correct": [
+      "Multiple terms; one per line or file",
+      "To ontologies, From empty",
+      "downloadable table; API lists unmapped inputs",
+      "Zooma first if the values are free text"
+    ],
+    "gaps": [
+      "Asserted only filter not mentioned"
+    ],
+    "errors": [],
+    "comment": "11 November run, OXO-02 (where to start): accurate. Minor addition: the Type -> Asserted only filter."
+  },
+  "42": {
+    "n": 42,
+    "id": "OXO-08",
+    "variant": "where-to-start",
+    "rating": "thumbs up",
+    "verdict": "pass",
+    "summary": "Accurate: Multiple sets expansion, Mapping Details, Mapping Set section, premise tracing for inferences, report contents, and the OLS Issue Tracker route.",
+    "correct": [
+      "expand Multiple sets rows",
+      "eye icon -> details",
+      "Mapping Set identifies publisher",
+      "Asserted Mappings under Inference Details -> faulty premise -> its publisher",
+      "report contents incl. the two definitions",
+      "Issue Tracker in OLS for ontology cross-references"
+    ],
+    "gaps": [
+      "how to spot the faulty premise (labels, LexicalMatching, MappingChaining)"
+    ],
+    "errors": [],
+    "comment": "11 November run, OXO-08 (where to start): accurate against the use case."
+  },
+  "18": {
+    "n": 18,
+    "id": "TRIO-01",
+    "variant": "full",
+    "rating": "thumbs down",
+    "verdict": "partial",
+    "summary": "Identical to the 9 November answer. The five-stage workflow is right, but the reliability safeguards the question asks for are still incomplete: broader parent codes are not flagged as broader, inferred mappings are validated too loosely, unresolved values are not left for manual coding, and choosing between several asserted codes is missing.",
+    "correct": [
+      "deduplicate values first",
+      "Zooma with MONDO as target",
+      "accept at 90%+, review lower or ambiguous suggestions in OLS; alternatives via thumbs down or OLS search",
+      "OxO Multiple terms to ICD10CM with Asserted only",
+      "inferred mappings or parent code as fallback",
+      "assemble a table with provenance and rejoin to the dataset",
+      "review everything below 90%; look up codes without labels; record the date"
+    ],
+    "gaps": [
+      "a parent's code is broader than the term and must be marked as such (step 12)",
+      "validation of an inferred mapping: accept only if the published mappings behind it link terms with the same meaning; checking the code's meaning alone is not sufficient",
+      "values that cannot be coded should be left for manual coding",
+      "where a term has several asserted codes, choose the one at the same level of generality (step 11)",
+      "several green suggestions for one value also need review; 'Did not map' group not named",
+      "run a sample first to estimate the review effort"
+    ],
+    "errors": [],
+    "comment": "11 November run, TRIO-01: unchanged from 9 November, so the same reliability gaps remain. When a parent term's code is used, say and record that it is broader than the original term; for inferred mappings, accept only when the asserted premises in Mapping Details link equivalent meanings (checking the code's meaning alone is not enough); leave values with no code for manual coding; and say how to choose between several asserted codes. Source: use case TRIO-01 steps 11 and 12."
+  },
+  "19": {
+    "n": 19,
+    "id": "TRIO-02",
+    "variant": "full",
+    "rating": "thumbs up",
+    "verdict": "pass",
+    "summary": "Accurate three-step order (OLS, then OxO with Obsolete terms ticked, then Zooma from the wording), with the final OLS check and the manual-decision fallback.",
+    "correct": [
+      "stop at the first tool that answers",
+      "OLS with Include obsolete terms; Replaced by",
+      "OxO with Obsolete terms under More options; prefer exact match, small distance, matching label",
+      "Zooma with the original free text or the old label minus the obsolete prefix",
+      "verify replacement in OLS; unresolved terms need a manual decision"
+    ],
+    "gaps": [
+      "record old -> new with how it was found, keep the table with the date",
+      "Reason field may suggest an alternative",
+      "replacement is not always one for one (split or merged terms)",
+      "API calls (left to a follow-up)"
+    ],
+    "errors": [],
+    "comment": "11 November run, TRIO-02: accurate against the use case. Additions: keep a dated old -> new table noting how each replacement was found, read the Reason field when no replacement is named, and warn that an obsolete term may have been split or merged rather than replaced one for one."
+  },
+  "20": {
+    "n": 20,
+    "id": "TRIO-03",
+    "variant": "full",
+    "rating": "thumbs up",
+    "verdict": "pass",
+    "summary": "Accurate overall workflow, and gets the key OxO detail right: codes written as prefix:code and Max distance 1 for direct mappings into the common ontology.",
+    "correct": [
+      "choose a common ontology in OLS (Mondo)",
+      "Zooma for unique free-text values, verified in OLS",
+      "OxO with codes as prefix:code, target the common ontology, Max distance 1",
+      "group by OLS ancestors at a chosen level",
+      "add term and group to every record"
+    ],
+    "gaps": [
+      "why not Asserted only in this direction (published direction is ontology -> code)",
+      "codes with several or no rows: compare in OLS or raise Max distance",
+      "keep the original value or code beside the new term; terms can have several parents",
+      "record date, ontology version and OxO data release",
+      "API calls (left to a follow-up)"
+    ],
+    "errors": [],
+    "comment": "11 November run, TRIO-03: accurate against the use case, including Max distance 1 for the code-to-ontology step. Additions: say explicitly not to use Asserted only in that direction and why, what to do when a code gets several rows or none, and to keep the original codes beside the new terms."
+  },
+  "39": {
+    "n": 39,
+    "id": "TRIO-01",
+    "variant": "where-to-start",
+    "rating": "thumbs up",
+    "verdict": "pass",
+    "summary": "Correct overview of the five stages, including why a bridging ontology is needed and the advice to run a sample first.",
+    "correct": [
+      "unique values first",
+      "Zooma to a bridging ontology because it cannot suggest ICD-10-CM codes directly",
+      "OLS review",
+      "OxO translation",
+      "assemble and join",
+      "sample first to estimate review effort"
+    ],
+    "gaps": [
+      "Asserted only filter and the inferred/parent fallbacks (acceptable at this level)"
+    ],
+    "errors": [],
+    "comment": "11 November run, TRIO-01 (where to start): accurate overview."
+  },
+  "43": {
+    "n": 43,
+    "id": "TRIO-02",
+    "variant": "where-to-start",
+    "rating": "thumbs up",
+    "verdict": "pass",
+    "summary": "Accurate three-step overview with the final OLS check.",
+    "correct": [
+      "OLS with Include obsolete terms, Replaced by",
+      "OxO with Obsolete terms ticked",
+      "Zooma from the wording",
+      "verify in OLS; manual decision otherwise"
+    ],
+    "gaps": [],
+    "errors": [],
+    "comment": "11 November run, TRIO-02 (where to start): accurate."
+  },
+  "44": {
+    "n": 44,
+    "id": "TRIO-03",
+    "variant": "where-to-start",
+    "rating": "thumbs up",
+    "verdict": "pass",
+    "summary": "Accurate overview of the five stages.",
+    "correct": [
+      "common ontology via OLS",
+      "Zooma for free text, checked in OLS",
+      "OxO for codes",
+      "group via OLS hierarchy",
+      "combine"
+    ],
+    "gaps": [
+      "Max distance 1 when translating codes into the ontology"
+    ],
+    "errors": [],
+    "comment": "11 November run, TRIO-03 (where to start): accurate overview. Worth adding even here: set Max distance to 1 when translating codes into the ontology."
+  },
+  "21": {
+    "n": 21,
+    "id": "PAIR-01",
+    "variant": "full",
+    "rating": "thumbs up",
+    "verdict": "pass",
+    "summary": "Accurate review loop: Mapping Provenance, Term ID into OLS for definition, synonyms and hierarchy, thumbs-down alternatives checked the same way, and decisions recorded outside Zooma.",
+    "correct": [
+      "Prediction Type -> Mapping Provenance and its meaning",
+      "Term ID -> OLS: definition, synonyms, hierarchy",
+      "thumbs down -> candidates, check in OLS, CONFIRM",
+      "icons not saved; record decisions in a working file"
+    ],
+    "gaps": [
+      "use row colours to pick the rows to check; Embedding suggestions deserve the closest look",
+      "check the deprecated status box in OLS",
+      "move to a parent or child in the Tree when the term is too broad or narrow",
+      "if no candidate fits, find a term by hand (PAIR-06)",
+      "spot-check green rows too"
+    ],
+    "errors": [],
+    "comment": "11 November run, PAIR-01: accurate against the use case. Additions: pick rows by colour (yellow below 90% or several high-confidence suggestions, grey low), look hardest at Embedding suggestions, check the deprecated box in OLS, move up or down the Tree when a term is too broad or narrow, and fall back to a manual search when no candidate fits."
+  },
+  "22": {
+    "n": 22,
+    "id": "PAIR-02",
+    "variant": "full",
+    "rating": "thumbs down",
+    "verdict": "partial",
+    "summary": "Answers the example only: the term and the three asserted codes match the use case exactly, but the OLS half of the workflow is absent and the OxO half is a bare pointer.",
+    "correct": [
+      "myocardial infarction MONDO:0005068",
+      "MESH:D009203, ICD10CM:I21, SCTID:22298006 as asserted SKOS:exactMatch",
+      "mappings may be wrong and need evaluating"
+    ],
+    "gaps": [
+      "no OLS step: search the concept, tick MONDO, confirm the definition, copy the identifier",
+      "no OxO procedure: paste the identifier, choose To ontologies (ICD10CM, MESH, SCTID), prefer Asserted exact matches, inspect inferences with the eye icon",
+      "prefix note (SCTID, ICD10CM) and that ICD-10-CM codes are not in OLS",
+      "nothing a user with a different concept can act on"
+    ],
+    "errors": [],
+    "comment": "11 November run, PAIR-02: the example result is right (MONDO:0005068; MESH:D009203, ICD10CM:I21, SCTID:22298006) but the method is missing. The use case is a two-tool procedure: search OLS for the concept, tick MONDO, confirm the definition and copy the identifier; then in OxO paste it, choose ICD10CM, MESH and SCTID under To ontologies, prefer Asserted exact matches and open inferences before using them. Please give the steps, not only the example's answer."
+  },
+  "23": {
+    "n": 23,
+    "id": "PAIR-03",
+    "variant": "full",
+    "rating": "thumbs up",
+    "verdict": "pass",
+    "summary": "More complete than on 9 November: evidence columns and Mapping Details, five-point OLS comparison, accept/downgrade/reject with no merging on a downgrade, and the reporting route.",
+    "correct": [
+      "Predicate, Type, Mapping justification, Distance; eye icon; weakest link of an inference",
+      "exact match is the publisher's claim; depends on use",
+      "definitions, Tree, synonyms, children, database_cross_reference",
+      "accept / downgrade (do not merge) / reject",
+      "Mapping Set identifies the publisher to report to"
+    ],
+    "gaps": [
+      "differing labels as the cheapest warning sign; Max distance to prefer short derivations; terms without a label in OxO"
+    ],
+    "errors": [
+      "wording slip: 'describe the same substance' where the use case means 'the same thing in substance'"
+    ],
+    "comment": "11 November run, PAIR-03: accurate and fuller than on 9 November, covering evidence, comparison, decision and reporting. One wording slip: 'describe the same substance' should read 'describe the same thing'. Optional additions: differing labels as a first warning sign and the Max distance filter."
+  },
+  "24": {
+    "n": 24,
+    "id": "PAIR-04",
+    "variant": "full",
+    "rating": "thumbs up",
+    "verdict": "pass",
+    "summary": "Accurate: top term (MONDO:0005015), Tree check, API descendants for large branches, OxO Multiple terms with Asserted only and download, and both fallbacks for terms without a code.",
+    "correct": [
+      "diabetes mellitus MONDO:0005015; confirm branch in the Tree",
+      "API for descendants of a large branch",
+      "OxO Multiple terms, To ontologies ICD10CM, Asserted only, SSSOM download",
+      "no code: inferred mappings, or parent's broader code"
+    ],
+    "gaps": [
+      "how to find the terms without a code (Subject column, or unmappedInputs via batch-map)",
+      "hierarchicalDescendants endpoint and the 500/1,000 limits",
+      "expect many unmapped terms; the choice of top term decides the list (codes outside E08-E13)",
+      "record date and ontology version"
+    ],
+    "errors": [],
+    "comment": "11 November run, PAIR-04: accurate against the use case. Additions: say how to list the terms without a code (compare the Subject column, or read unmappedInputs from the batch-map API), name the hierarchicalDescendants endpoint, and warn that the choice of top term decides the list, e.g. gestational and neonatal diabetes map outside the E08-E13 block."
+  },
+  "25": {
+    "n": 25,
+    "id": "PAIR-05",
+    "variant": "full",
+    "rating": "thumbs up",
+    "verdict": "pass",
+    "summary": "Accurate two-step workflow with the right details (custom bridging ontology, carry forward only accepted suggestions, underscore to colon, Asserted only) and a sensible parent-code fallback.",
+    "correct": [
+      "Zooma to a bridging ontology such as MONDO",
+      "carry forward only satisfactory suggestions",
+      "MONDO_0005068 -> MONDO:0005068",
+      "OxO Multiple terms, To ontologies, Asserted only, download",
+      "OLS parent as fallback"
+    ],
+    "gaps": [
+      "why two steps: ICD-10-CM is not in OLS and mapping straight to MeSH performs worse",
+      "join the two files on the term identifier (textToMap -> ontologyTermID; subject_id -> object_id)",
+      "list the values that fell out at either step and handle them by hand",
+      "inferred mappings judged one by one; one term may have several or no target identifiers"
+    ],
+    "errors": [],
+    "comment": "11 November run, PAIR-05: accurate against the use case. Additions: explain why two steps are needed (ICD-10-CM is not in OLS; Zooma straight to MeSH does worse), describe joining Zooma's file to OxO's on the term identifier, and say to list the values lost at either step for manual handling."
+  },
+  "26": {
+    "n": 26,
+    "id": "PAIR-06",
+    "variant": "full",
+    "rating": "thumbs up",
+    "verdict": "pass",
+    "summary": "Accurate OLS search ladder (words, other words, meaning, browse), verification advice, and both no-term outcomes (broader term with original text kept; request via Issue Tracker).",
+    "correct": [
+      "search with the value's words, tick ontologies",
+      "technical names, full names, singular",
+      "Search Model -> embedding model",
+      "browse a broader term's Tree",
+      "verify definition and parents",
+      "use a broader term and keep the original text",
+      "Issue Tracker request with concept, definition and placement"
+    ],
+    "gaps": [
+      "first look through Zooma's longer candidate list via thumbs down",
+      "how to collect the leftover values (Did not map, grey, rejected)",
+      "expand abbreviations and fix misspellings, then retry Zooma",
+      "some values should not be mapped ('not recorded', 'other')",
+      "keep the value -> term decisions"
+    ],
+    "errors": [],
+    "comment": "11 November run, PAIR-06: accurate against the use case. Additions: start with Zooma's thumbs-down candidate list before searching by hand, expand abbreviations and correct misspellings and retry Zooma, and note that values like 'not recorded' should not be forced onto a term."
+  },
+  "27": {
+    "n": 27,
+    "id": "ZOOMA-01",
+    "variant": "full",
+    "rating": "thumbs up",
+    "verdict": "partial",
+    "summary": "Correct input procedure (Map Strings, one per line, Tab for the kind, Map N strings) but says little about reading the results and nothing about download or the limits of the confidence score.",
+    "correct": [
+      "Map Strings tab, one value per line",
+      "Tab then the kind as context",
+      "green Map N strings button",
+      "suggestions with confidence and provenance",
+      "OLS to choose ontologies or to search by hand"
+    ],
+    "gaps": [
+      "Results columns (Term ID opens OLS, Source, Prediction Type)",
+      "row colours and Did not map",
+      "Download as TSV (zooma_results.tsv)",
+      "confidence is a ranking score: check non-green rows and spot-check green ones",
+      "choosing target ontologies improves results",
+      "API call"
+    ],
+    "errors": [],
+    "comment": "11 November run, ZOOMA-01: input steps are right. Please add how to read the Results table (Term ID opens OLS, Source, Prediction Type, row colours, Did not map), the TSV download, and the caveat that the confidence is a ranking score, so non-green rows need checking and green ones spot-checking."
+  },
+  "28": {
+    "n": 28,
+    "id": "ZOOMA-02",
+    "variant": "full",
+    "rating": "thumbs up",
+    "verdict": "pass",
+    "summary": "Accurate: custom ontology list in order of preference, the API example, single answer with an ordered list, and the default state of Include results from other ontologies.",
+    "correct": [
+      "section 3, Choose custom ontologies, order by preference",
+      "targetOntologies and includeOtherOntologies example",
+      "ordered list gives one answer; none gives several",
+      "includeOtherOntologies unticked by default for a custom list"
+    ],
+    "gaps": [
+      "presets and All ontologies (not recommended)",
+      "Include results from other ontologies tick box on the website",
+      "ontology-presets API"
+    ],
+    "errors": [],
+    "comment": "11 November run, ZOOMA-02: accurate against the use case. Minor additions: the presets and the Include results from other ontologies tick box on the website."
+  },
+  "29": {
+    "n": 29,
+    "id": "ZOOMA-03",
+    "variant": "full",
+    "rating": "thumbs up",
+    "verdict": "pass",
+    "summary": "Accurate: export as CSV/TSV, Upload CSV, the preview settings, Term and Type columns, Import then Map, download and join on textToMap and propertyType, deduplicate first.",
+    "correct": [
+      "save as CSV/TSV/TXT; Upload CSV",
+      "Delimiter, Quote character, First row is header",
+      "Term column, Type column or None",
+      "Import, then Map",
+      "zooma_results.tsv; join on textToMap and propertyType",
+      "remove duplicates first"
+    ],
+    "gaps": [
+      "Zooma pre-selects the first two columns as Term and Type, so check both",
+      "imported values are added to the existing box: Clear first",
+      "several suggestions per value: decide which to keep before joining"
+    ],
+    "errors": [],
+    "comment": "11 November run, ZOOMA-03: accurate against the use case. Additions: warn that Zooma pre-selects the first column as Term and the second as Type, and that imported values are added to what is already in the box."
+  },
+  "30": {
+    "n": 30,
+    "id": "ZOOMA-04",
+    "variant": "full",
+    "rating": "thumbs up",
+    "verdict": "pass",
+    "summary": "Accurate on both tools: Annotate Text with the ontology choice flagged as critical, OLS Tag Text with its result columns, and sensible advice for words not picked up.",
+    "correct": [
+      "Annotate Text tab; paste; choose ontologies (critical); Annotate Text button",
+      "OLS Tag Text and Matched Terms columns",
+      "map missed words separately on Map Strings",
+      "restrict by ontology; search by meaning in OLS"
+    ],
+    "gaps": [
+      "reading the annotated text (coloured phrase labels), clicking a phrase, discarding with x",
+      "download zooma_results.tsv",
+      "a phrase with two green suggestions needs a decision",
+      "annotate-text-stream API"
+    ],
+    "errors": [],
+    "comment": "11 November run, ZOOMA-04: accurate against the use case. Additions: how the annotated text is shown (coloured phrase labels, click to highlight, x to discard), the download, and that a phrase with two green suggestions needs a decision."
+  },
+  "31": {
+    "n": 31,
+    "id": "ZOOMA-05",
+    "variant": "full",
+    "rating": "thumbs up",
+    "verdict": "pass",
+    "summary": "Identical to the 9 November answer; accurate on Mapping Provenance, alternatives via thumbs down, OLS checks, and the warning that screen decisions are neither saved nor in the download.",
+    "correct": [
+      "Prediction Type -> Mapping Provenance",
+      "thumbs down -> Select Mapping, candidates by confidence",
+      "check candidates in OLS",
+      "icons change only the screen; not saved, not sent, not in the download",
+      "working file with decisions, date and settings"
+    ],
+    "gaps": [
+      "record the replacement's label, identifier and IRI in the file since the download never contains alternatives",
+      "meaning of the Prediction Type values",
+      "API returnAll and deep"
+    ],
+    "errors": [],
+    "comment": "11 November run, ZOOMA-05: accurate, unchanged from 9 November. Small improvement: say to write the chosen alternative's label, identifier and IRI into the working file, because the download never contains it."
+  },
+  "32": {
+    "n": 32,
+    "id": "ZOOMA-06",
+    "variant": "full",
+    "rating": "thumbs up",
+    "verdict": "pass",
+    "summary": "Accurate: curated mappings and their Source, the Where to get mappings controls (exclude, include, reorder), the filter.required / filter.preferred API, and the excluded-ontology caveat.",
+    "correct": [
+      "curated mappings suggested with high confidence; Source names the resource",
+      "section 2 controls: x, click to include, drag to reorder",
+      "filter.required and filter.preferred on services/map; omit filter for all",
+      "curated mapping not suggested if its ontology is excluded"
+    ],
+    "gaps": [
+      "Prediction Type reads Curated",
+      "a curated mapping was made for a purpose: check it fits your use of the text",
+      "Select all / Select none; sources API"
+    ],
+    "errors": [],
+    "comment": "11 November run, ZOOMA-06: accurate against the use case. Additions: Prediction Type reads Curated for such rows, and a curated mapping reflects the purpose of the resource that made it (cooked broccoli -> sulforaphane), so check that it fits your own use."
+  },
+  "40": {
+    "n": 40,
+    "id": "ZOOMA-04",
+    "variant": "where-to-start",
+    "rating": "thumbs up",
+    "verdict": "pass",
+    "summary": "Correct choice between OLS Tag Text (every match, unranked) and Zooma Annotate Text (one ranked suggestion per phrase, ontology choice decides the phrases).",
+    "correct": [
+      "OLS Tag Text for every label match",
+      "Zooma Annotate Text for ranked suggestions; ontologies must be chosen"
+    ],
+    "gaps": [
+      "first steps on either tool not given (acceptable at this level)"
+    ],
+    "errors": [],
+    "comment": "11 November run, ZOOMA-04 (where to start): accurate choice between the two tools."
+  },
+  "41": {
+    "n": 41,
+    "id": "PAIR-03",
+    "variant": "where-to-start",
+    "rating": "thumbs up",
+    "verdict": "pass",
+    "summary": "Accurate: Mapping Details, asserted vs inferred with the weakest-premise idea, OLS comparison, justification and Distance as warning signs.",
+    "correct": [
+      "eye icon -> Mapping Details",
+      "Asserted: who and how; inference: Asserted Mappings, weakest link",
+      "compare definitions, synonyms, hierarchy in OLS",
+      "LexicalMatching and MappingChaining deserve scrutiny; Distance"
+    ],
+    "gaps": [
+      "the accept / downgrade / reject decision (acceptable at this level)"
+    ],
+    "errors": [],
+    "comment": "11 November run, PAIR-03 (where to start): accurate against the use case."
+  },
+  "38": {
+    "n": 38,
+    "id": "PAIR-01",
+    "variant": "where-to-start",
+    "rating": "thumbs up",
+    "verdict": "partial",
+    "summary": "Answers along the expected path (Zooma first, review doubtful suggestions in OLS, handle unmapped values) but omits recording decisions outside Zooma and the deprecated-status check; cites the Zooma use cases and TRIO-01 rather than PAIR-01.",
+    "correct": [
+      "Zooma for the list; deduplicate first",
+      "CSV/TSV upload or paste; Choose custom ontologies",
+      "review suggestions in OLS: definitions, synonyms, parents",
+      "unmapped values: search OLS by hand"
+    ],
+    "gaps": [
+      "record decisions outside Zooma (icons are not saved)",
+      "check the deprecated status box",
+      "accept / replace per suggestion; thumbs-down alternatives",
+      "sources cite ZOOMA-01/02/03 and TRIO-01, not PAIR-01"
+    ],
+    "errors": [],
+    "comment": "11 November run, PAIR-01 (where to start): the Zooma-then-OLS path matches the expected answer. Additions: say to record decisions outside Zooma because the review icons are not saved, and to check the deprecated box when reviewing a term in OLS."
+  }
+}

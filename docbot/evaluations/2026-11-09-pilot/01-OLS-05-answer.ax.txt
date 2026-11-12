@@ -1,0 +1,102 @@
+Browser tab: 1, Title: "DocBot", URL: "https://wwwdev.ebi.ac.uk/docbot/?selected=ontology_tools".
+0 AXWebArea DocBot, URL: wwwdev.ebi.ac.uk/docbot/?selected=ontology_tools
+	1 container docbot-app
+		2 pop up button (collapsed) DocBot DocBot Ontology Tools, Secondary Actions: Expand
+			3 image DocBot
+			4 text DocBot
+			5 text Ontology Tools
+			6 image
+		108 pop up button (collapsed) Description: Chat options, Secondary Actions: Expand
+		109 container
+			110 text You
+			111 image You
+			112 text Is the term I am using still current? If it has been made obsolete, which term should I use instead?
+			113 image DocBot
+			114 text DocBot To determine if an ontology term is current or obsolete, you should use 
+			115 link Description: OLS, Value: ebi.ac.uk/ols4
+			116 text .
+			117 heading Using the OLS website:, Value: 3
+				118 text Using the 
+				119 link Description: OLS, Value: ebi.ac.uk/ols4
+				120 text  website:
+			121 content list
+				122 container
+					123 AXListMarker 1. 
+					124 text Open 
+					125 link Description: OLS, Value: ebi.ac.uk/ols4
+					126 text .
+				127 container
+					128 AXListMarker 2. 
+					129 text Tick the  Include obsolete terms  checkbox under the search box.
+				130 container
+					131 AXListMarker 3. 
+					132 text Enter the term identifier and press Enter.
+				133 container
+					134 AXListMarker 4. 
+					135 text Open the result from the relevant ontology.
+				136 container
+					137 AXListMarker 5. 
+					138 text Check the top of the term’s page:
+					139 content list
+						140 container
+							141 AXListMarker • 
+							142 text If there is no red box, the term is current.
+						143 container
+							144 AXListMarker • 
+							145 text If a red box says “This class is deprecated,” the term is obsolete.
+				146 container
+					147 AXListMarker 6. 
+					148 text If obsolete, look under  Class Information  for “term replaced by” to find the suggested replacement. If no replacement is listed, the ontology may provide a “Reason” that suggests an alternative.
+			149 heading Using the OLS API:, Value: 3
+				150 text Using the 
+				151 link Description: OLS, Value: ebi.ac.uk/ols4
+				152 text  API:
+			153 text You can check the status programmatically using the following command:
+			154 text curl -s 'https://www.ebi.ac.uk/ols4/api/ontologies/[ontology_id]/terms?obo_id=[term_id]'
+			155 text In the response, check the 
+			156 text is_obsolete
+			157 text  field:
+			158 content list
+				159 container
+					160 AXListMarker • 
+					161 text If  true , the term is obsolete.
+				162 container
+					163 AXListMarker • 
+					164 text The  term_replaced_by  field will contain the IRI of the replacement, or  null  if none is recorded.
+			165 text If the term is obsolete and no replacement is provided by the ontology, you can use 
+			166 link Description: OxO, Value: ebi.ac.uk/spot/oxo
+			167 text  to find mappings to current terms or 
+			168 link Description: Zooma, Value: ebi.ac.uk/spot/zooma
+			169 text  to find a successor based on the term’s wording. Would you like to know how to use 
+			170 link Description: OxO, Value: ebi.ac.uk/spot/oxo
+			171 text  to find a successor for an obsolete term?
+			172 button View sources
+				173 text View sources
+				174 image
+			175 button Hide sources
+				176 text Hide sources
+				177 image
+			178 content list
+				179 link Value: github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/ols/OLS-05-check-obsolete-term.md, Description: https://github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/ols/OLS-05-check-obsolete-term.md (opens in new tab)
+				180 link Description: https://github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/three-tools/TRIO-02-update-outdated-annotations.md (opens in new tab), Value: github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/three-tools/TRIO-02-update-outdated-annotations.md
+			181 button Good response
+				182 image
+			183 button Bad response
+				184 image
+			185 button Contact Ontology Tools support
+		94 text entry area (settable) Ask me, ID: vf-chatbot-standalone-input
+		95 button Send message
+			96 image Send
+		97 container
+			98 text Our chatbot uses AI to assist you. Its use is subject to the 
+			99 link Description: EMBL-EBI Terms of Use, Value: ebi.ac.uk/about/terms-of-use/
+			100 text  and the 
+			101 link Description: Chatbot Disclaimer, Value: ebi.ac.uk/about/embl-ebi-ai-chatbot-disclaimer/
+			102 text . Do not include any personal information about you or others in the chat (for more information, see the
+			103 link Description:  Privacy Notice, Value: wwwdev.ebi.ac.uk/docbot/assets/privacy_notice.pdf
+			104 text ).
+			105 text Learn more in the 
+			106 link Description: DocBot documentation, Value: ebi-wp.gitdocs.ebi.ac.uk/docbot_docs/index.html
+			107 text .
+
+The focused UI element is 94 text entry area (settable) Ask me, ID: vf-chatbot-standalone-input

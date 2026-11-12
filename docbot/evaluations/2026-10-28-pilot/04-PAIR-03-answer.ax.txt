@@ -1,0 +1,92 @@
+Browser tab: 3, Title: "DocBot", URL: "https://wwwdev.ebi.ac.uk/docbot/?selected=ontology_tools".
+0 AXWebArea DocBot, URL: wwwdev.ebi.ac.uk/docbot/?selected=ontology_tools
+	1 container docbot-app
+		2 pop up button (collapsed) DocBot DocBot Ontology Tools, Secondary Actions: Expand
+			3 image DocBot
+			4 text DocBot
+			5 text Ontology Tools
+			6 image
+		88 pop up button (collapsed) Description: Chat options, Secondary Actions: Expand
+		89 container
+			90 text You
+			91 image You
+			92 text OxO says two terms are an exact match. Before I merge data on the strength of that, do the two terms really mean the same thing?
+			93 image DocBot
+			94 text DocBot To verify if two terms identified as an exact match by OxO truly have the same meaning, you should evaluate the mapping evidence and compare the terms using OLS.
+			95 heading 1. Evaluate the Mapping Evidence in OxO, Value: 3
+				96 text 1. Evaluate the Mapping Evidence in OxO
+			97 content list
+				98 container
+					99 AXListMarker • 
+					100 text Check the details:  In the OxO results table, click the eye icon to open the Mapping Details.
+				101 container
+					102 AXListMarker • 
+					103 text Review provenance:  For asserted mappings, identify who published the mapping and how it was created. For inferred mappings, examine the underlying asserted mappings and identify the weakest link (e.g., mappings derived from automatic label matching or those between terms with differing labels).
+				104 container
+					105 AXListMarker • 
+					106 text Consider the distance:  Shorter derivations are generally safer. You can use the Max distance filter to focus on shorter paths.
+				107 container
+					108 AXListMarker • 
+					109 text Warning signs:  Differing labels are a primary indicator to investigate further.
+			110 heading 2. Compare Terms in OLS, Value: 3
+				111 text 2. Compare Terms in OLS
+			112 text Click the OLS link for both the subject and object terms to compare them side-by-side:
+			113 content list
+				114 container
+					115 AXListMarker • 
+					116 text Definition:  Determine if the definitions describe the same substance or if one is a cause, consequence, part, or special case of the other.
+				117 container
+					118 AXListMarker • 
+					119 text Tree:  Follow the hierarchy upwards to ensure both terms represent the same kind of thing (e.g., a disease and a phenotype are not interchangeable).
+				120 container
+					121 AXListMarker • 
+					122 text Synonyms:  Check if each term lists the other’s label or a similar term.
+				123 container
+					124 AXListMarker • 
+					125 text Children:  Expand the trees; if one term has children that the other lacks, it may be broader.
+				126 container
+					127 AXListMarker • 
+					128 text Class Information:  Check if the ontology cross-references the other term (database_cross_reference).
+			129 heading 3. Decide on an Outcome, Value: 3
+				130 text 3. Decide on an Outcome
+			131 text Based on your comparison, choose one of the following:
+			132 content list
+				133 container
+					134 AXListMarker • 
+					135 text Accept:  The terms have the same definition in substance and are the same kind of thing; treat them as equivalent.
+				136 container
+					137 AXListMarker • 
+					138 text Downgrade:  The terms are closely related but not identical (e.g., broader, narrower, or different kinds of things). Keep the link as a close, broad, or narrow match, but do not merge records.
+				139 container
+					140 AXListMarker • 
+					141 text Reject:  The terms mean different things; do not use the mapping.
+			142 text Note that “exact match” is a claim made by the publisher for their specific purposes; whether it is sufficient for your needs depends on your specific use case (e.g., retrieving literature vs. counting patients). If a term is not in OLS, look it up at its home resource. Would you like to know how to report a mapping you believe is incorrect?
+			143 button View sources
+				144 text View sources
+				145 image
+			146 button Hide sources
+				147 text Hide sources
+				148 image
+			149 content list
+				150 link Value: github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/two-tools/PAIR-03-validate-a-mapping.md, Description: https://github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/two-tools/PAIR-03-validate-a-mapping.md (opens in new tab)
+			151 button Good response
+				152 image
+			153 button Bad response
+				154 image
+			155 button Contact Ontology Tools support
+		74 text entry area (settable) Ask me, ID: vf-chatbot-standalone-input
+		75 button Send message
+			76 image Send
+		77 container
+			78 text Our chatbot uses AI to assist you. Its use is subject to the 
+			79 link Description: EMBL-EBI Terms of Use, Value: ebi.ac.uk/about/terms-of-use/
+			80 text  and the 
+			81 link Description: Chatbot Disclaimer, Value: ebi.ac.uk/about/embl-ebi-ai-chatbot-disclaimer/
+			82 text . Do not include any personal information about you or others in the chat (for more information, see the
+			83 link Description:  Privacy Notice, Value: wwwdev.ebi.ac.uk/docbot/assets/privacy_notice.pdf
+			84 text ).
+			85 text Learn more in the 
+			86 link Description: DocBot documentation, Value: ebi-wp.gitdocs.ebi.ac.uk/docbot_docs/index.html
+			87 text .
+
+The focused UI element is 74 text entry area (settable) Ask me, ID: vf-chatbot-standalone-input

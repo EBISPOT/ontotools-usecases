@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-09",
+  "target": "https://wwwdev.ebi.ac.uk/docbot/?selected=ontology_tools",
+  "referenceCommit": "773bf7c131b2426ee78fae9bb38073f408530dcd",
+  "remoteFreshnessVerified": false,
+  "deploymentVersion": "Not exposed or independently verified; user reports DocBot update",
+  "referenceFiles": {
+    "OLS-05-check-obsolete-term.md": "3c831b5ab5013004ebf8927e95255965df9c28569bb4f727fe988f3a4695deab",
+    "OXO-04-check-mapping-provenance.md": "286c691a98a627a158ceed84a6f135287b545ba1430c40ee3b444421a1bc3f96",
+    "PAIR-03-validate-a-mapping.md": "5106a10cec90ae42cc636a0910aa40907413f3094b9861212023c7a24092fbc4",
+    "TRIO-01-harmonise-free-text-to-codes.md": "fec52e1e9befb19f9c2abd258b1ac0cd7c0099c66c7bf4037d4eea0239a6d95d",
+    "ZOOMA-05-review-and-choose-alternative.md": "d9e27a1ab7d21e741af032bb3c5d46b2105014cc7bd4e2b9038cd04d3d59d449"
+  }
+}

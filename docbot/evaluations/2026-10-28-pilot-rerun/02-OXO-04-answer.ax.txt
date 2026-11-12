@@ -1,0 +1,82 @@
+Browser tab: 4, Title: "DocBot", URL: "https://wwwdev.ebi.ac.uk/docbot/?selected=ontology_tools".
+0 AXWebArea DocBot, URL: wwwdev.ebi.ac.uk/docbot/?selected=ontology_tools
+	1 container docbot-app
+		2 pop up button (collapsed) DocBot DocBot Ontology Tools, Secondary Actions: Expand
+			3 image DocBot
+			4 text DocBot
+			5 text Ontology Tools
+			6 image
+		95 pop up button (collapsed) Description: Chat options, Secondary Actions: Expand
+		96 container
+			97 text You
+			98 image You
+			99 text Can I rely on this mapping? Who published it and on what basis — and if OxO inferred it, from which published mappings?
+			100 image DocBot
+			101 text DocBot Whether you can rely on a mapping depends on its origin and the evidence supporting it. OxO publishes no mappings of its own except for inferences; every mapping originates from either a curated set (published by a project like Mondo, Biomappings, or SeMRA) or an ontology’s own cross-references (extracted from 
+			102 link Description: OLS, Value: ebi.ac.uk/ols4/
+			103 text ). To determine the reliability of a specific mapping:
+			104 content list
+				105 container
+					106 AXListMarker • 
+					107 text Check the Type:  In the 
+					108 link Description: OxO, Value: ebi.ac.uk/spot/oxo
+					109 text  results table, the  Type  column indicates if a mapping is  Asserted  (published by a third party) or an  SSSOM inference  (derived by OxO).
+				110 container
+					111 AXListMarker • 
+					112 text View Mapping Details:  Click the eye icon at the end of any row to open the Mapping Details page. This page provides:
+					113 content list
+						114 container
+							115 AXListMarker • 
+							116 text Mapping:  The statement (subject, predicate, object).
+						117 container
+							118 AXListMarker • 
+							119 text Mapping Set:  The collection the mapping belongs to, which identifies the publisher.
+						120 container
+							121 AXListMarker • 
+							122 text Justification:  How the mapping was made (e.g., ManualMappingCuration or LexicalMatching) and the publisher’s confidence, if provided.
+				123 container
+					124 AXListMarker • 
+					125 text Evaluate Inferences:  For inferred mappings, the details page includes an  Inference Details  section:
+					126 content list
+						127 container
+							128 AXListMarker • 
+							129 text Asserted Mappings:  Lists the specific published mappings the inference rests on.
+						130 container
+							131 AXListMarker • 
+							132 text Explanation:  A graph showing the derivation path.
+						133 container
+							134 AXListMarker • 
+							135 text Reliability:  An inferred mapping is a logical consequence of the published mappings it rests on and is exactly as reliable as those premises. You can judge the inference by its “weakest ingredient”—for example, an inference passing through a mapping made by automatic label matching is less reliable than one based on manually curated exact matches.
+			136 text “Exact match” claims are made by the publisher for their specific purposes; you should assess whether the mapping is suitable for your specific use case (e.g., retrieving literature versus counting patients). Would you like to know how to filter your search results to only show mappings that meet specific evidence requirements?
+			137 button View sources
+				138 text View sources
+				139 image
+			140 button Hide sources
+				141 text Hide sources
+				142 image
+			143 content list
+				144 link Value: github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/two-tools/PAIR-03-validate-a-mapping.md, Description: https://github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/two-tools/PAIR-03-validate-a-mapping.md (opens in new tab)
+				145 link Description: https://github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/oxo/OXO-08-find-source-of-incorrect-mapping.md (opens in new tab), Value: github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/oxo/OXO-08-find-source-of-incorrect-mapping.md
+				146 link Value: github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/oxo/OXO-01-find-equivalent-terms.md, Description: https://github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/oxo/OXO-01-find-equivalent-terms.md (opens in new tab)
+				147 link Value: github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/oxo/OXO-04-check-mapping-provenance.md, Description: https://github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/oxo/OXO-04-check-mapping-provenance.md (opens in new tab)
+			148 button Good response
+				149 image
+			150 button Bad response
+				151 image
+			152 button Contact Ontology Tools support
+		81 text entry area (settable) Ask me, ID: vf-chatbot-standalone-input
+		82 button Send message
+			83 image Send
+		84 container
+			85 text Our chatbot uses AI to assist you. Its use is subject to the 
+			86 link Description: EMBL-EBI Terms of Use, Value: ebi.ac.uk/about/terms-of-use/
+			87 text  and the 
+			88 link Description: Chatbot Disclaimer, Value: ebi.ac.uk/about/embl-ebi-ai-chatbot-disclaimer/
+			89 text . Do not include any personal information about you or others in the chat (for more information, see the
+			90 link Description:  Privacy Notice, Value: wwwdev.ebi.ac.uk/docbot/assets/privacy_notice.pdf
+			91 text ).
+			92 text Learn more in the 
+			93 link Description: DocBot documentation, Value: ebi-wp.gitdocs.ebi.ac.uk/docbot_docs/index.html
+			94 text .
+
+The focused UI element is 81 text entry area (settable) Ask me, ID: vf-chatbot-standalone-input

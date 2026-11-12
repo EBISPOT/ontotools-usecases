@@ -1,0 +1,113 @@
+Browser tab: 4, Title: "DocBot", URL: "https://wwwdev.ebi.ac.uk/docbot/?selected=ontology_tools".
+0 AXWebArea DocBot, URL: wwwdev.ebi.ac.uk/docbot/?selected=ontology_tools
+	1 container docbot-app
+		2 pop up button (collapsed) DocBot DocBot Ontology Tools, Secondary Actions: Expand
+			3 image DocBot
+			4 text DocBot
+			5 text Ontology Tools
+			6 image
+		95 pop up button (collapsed) Description: Chat options, Secondary Actions: Expand
+		96 container
+			97 text You
+			98 image You
+			99 text A column of my dataset holds diagnoses as people typed them. How do I turn that column into standard ontology terms and into codes of a coding system such as ICD-10-CM — and know which results I can rely on?
+			100 image DocBot
+			101 text DocBot To map free-text diagnoses to standard ontology terms and ICD-10-CM codes, follow this three-stage process:
+			102 content list
+				103 container
+					104 AXListMarker 1. 
+					105 text Propose Terms (Zooma):
+					106 content list
+						107 container
+							108 AXListMarker • 
+							109 text Remove duplicates from your column so each unique diagnosis is listed only once.
+						110 container
+							111 AXListMarker • 
+							112 text Use 
+							113 link Description: Zooma, Value: ebi.ac.uk/spot/zooma
+							114 text  to map these values to a bridging ontology (e.g., MONDO).
+						115 container
+							116 AXListMarker • 
+							117 text Accept suggestions with a confidence of 90% or more.
+				118 container
+					119 AXListMarker 2. 
+					120 text Review and Refine (OLS):
+					121 content list
+						122 container
+							123 AXListMarker • 
+							124 text For suggestions with a confidence below 90%, or those that are unmapped, use 
+							125 link Description: OLS, Value: ebi.ac.uk/spot/ols
+							126 text  to manually check definitions, synonyms, and parent terms.
+						127 container
+							128 AXListMarker • 
+							129 text Replace incorrect suggestions with appropriate terms found by searching 
+							130 link Description: OLS, Value: ebi.ac.uk/spot/ols
+							131 text .
+				132 container
+					133 AXListMarker 3. 
+					134 text Translate to Codes (OxO):
+					135 content list
+						136 container
+							137 AXListMarker • 
+							138 text Use 
+							139 link Description: OxO, Value: ebi.ac.uk/spot/oxo
+							140 text  to translate your agreed-upon ontology terms into ICD-10-CM codes.
+						141 container
+							142 AXListMarker • 
+							143 text When using 
+							144 link Description: OxO, Value: ebi.ac.uk/spot/oxo
+							145 text , set the Type filter to “Asserted only” for the most reliable mappings.
+						146 container
+							147 AXListMarker • 
+							148 text If a term lacks an asserted code, you may check for inferred mappings or look up the parent term’s code in 
+							149 link Description: OLS, Value: ebi.ac.uk/spot/ols
+							150 text  and 
+							151 link Description: OxO, Value: ebi.ac.uk/spot/oxo
+							152 text .
+			153 text Evaluating Reliability:
+			154 content list
+				155 container
+					156 AXListMarker • 
+					157 text Confidence Scores:  Use the confidence score provided by 
+					158 link Description: Zooma, Value: ebi.ac.uk/spot/zooma
+					159 text  as a guide; review everything below 90%.
+				160 container
+					161 AXListMarker • 
+					162 text Manual Verification:  Always verify codes in the coding system itself, especially if 
+					163 link Description: OxO, Value: ebi.ac.uk/spot/oxo
+					164 text  does not provide a label for a code.
+				165 container
+					166 AXListMarker • 
+					167 text Documentation:  Record how each term and code was obtained (e.g., “accepted from Zooma,” “chosen by hand”) and note the date of the run, as mappings change over time.
+			168 text Would you like to know how to use the API for this pipeline?
+			169 button View sources
+				170 text View sources
+				171 image
+			172 button Hide sources
+				173 text Hide sources
+				174 image
+			175 content list
+				176 link Value: github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/oxo/OXO-02-map-list-to-target.md, Description: https://github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/oxo/OXO-02-map-list-to-target.md (opens in new tab)
+				177 link Description: https://github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/three-tools/TRIO-01-harmonise-free-text-to-codes.md (opens in new tab), Value: github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/three-tools/TRIO-01-harmonise-free-text-to-codes.md
+				178 link Description: https://github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/two-tools/PAIR-05-free-text-to-vocabulary-codes.md (opens in new tab), Value: github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/two-tools/PAIR-05-free-text-to-vocabulary-codes.md
+			179 button Good response
+				180 image
+			181 button Bad response
+				182 image
+			183 button Contact Ontology Tools support
+		81 text entry area (settable) Ask me, ID: vf-chatbot-standalone-input
+		82 button Send message
+			83 image Send
+		84 container
+			85 text Our chatbot uses AI to assist you. Its use is subject to the 
+			86 link Description: EMBL-EBI Terms of Use, Value: ebi.ac.uk/about/terms-of-use/
+			87 text  and the 
+			88 link Description: Chatbot Disclaimer, Value: ebi.ac.uk/about/embl-ebi-ai-chatbot-disclaimer/
+			89 text . Do not include any personal information about you or others in the chat (for more information, see the
+			90 link Description:  Privacy Notice, Value: wwwdev.ebi.ac.uk/docbot/assets/privacy_notice.pdf
+			91 text ).
+			92 text Learn more in the 
+			93 link Description: DocBot documentation, Value: ebi-wp.gitdocs.ebi.ac.uk/docbot_docs/index.html
+			94 text .
+
+The focused UI element is 81 text entry area (settable) Ask me, ID: vf-chatbot-standalone-input

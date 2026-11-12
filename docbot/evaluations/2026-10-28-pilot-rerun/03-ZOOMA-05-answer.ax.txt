@@ -1,0 +1,64 @@
+Browser tab: 4, Title: "DocBot", URL: "https://wwwdev.ebi.ac.uk/docbot/?selected=ontology_tools".
+0 AXWebArea DocBot, URL: wwwdev.ebi.ac.uk/docbot/?selected=ontology_tools
+	1 container docbot-app
+		2 pop up button (collapsed) DocBot DocBot Ontology Tools, Secondary Actions: Expand
+			3 image DocBot
+			4 text DocBot
+			5 text Ontology Tools
+			6 image
+		95 pop up button (collapsed) Description: Chat options, Secondary Actions: Expand
+		96 container
+			97 text You
+			98 image You
+			99 text Zooma suggested a term for my value. Why that term? If it is not right, what else could it have been — and how do I keep a record of what I decide?
+			100 image DocBot
+			101 text DocBot Zooma suggests terms based on its internal mapping logic, which includes curated mappings from EMBL-EBI data resources and similarity of meaning judged by a language model. To understand why a specific term was suggested:
+			102 content list
+				103 container
+					104 AXListMarker • 
+					105 text Understand the suggestion:  Click on the value in the  Prediction Type  column of the results table to open the  Mapping Provenance  window. This shows what your text was matched against and the reasoning behind the suggestion.
+				106 container
+					107 AXListMarker • 
+					108 text Find alternatives:  If the suggestion is incorrect, click the  thumbs down  icon on the row. This opens the “Select Mapping” window, which lists all candidates Zooma found, including their Term Label, Confidence, Term ID, Source, and Prediction Type. You can select a better candidate from this list and click  CONFIRM .
+				109 container
+					110 AXListMarker • 
+					111 text Check terms:  Before accepting a suggestion or alternative, click the identifier in the  Term ID  column to open the term in 
+					112 link Description: OLS, Value: ebi.ac.uk/ols4
+					113 text . Check the definition, synonyms, hierarchy (Tree), and status to ensure it is appropriate for your data.
+				114 container
+					115 AXListMarker • 
+					116 text Keep a record:  Because the review controls (thumbs up/down and bin) in the Zooma interface are not saved and do not persist after a page reload or in the downloaded file, you must maintain your own record. Download the results as a TSV file and add a column to track your decisions, including the final term label, identifier, and IRI for each value.
+			117 text Would you like to know more about how to use 
+			118 link Description: OLS, Value: ebi.ac.uk/ols4
+			119 text  to verify these terms?
+			120 button View sources
+				121 text View sources
+				122 image
+			123 button Hide sources
+				124 text Hide sources
+				125 image
+			126 content list
+				127 link Value: github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/zooma/ZOOMA-06-reuse-curated-mappings.md, Description: https://github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/zooma/ZOOMA-06-reuse-curated-mappings.md (opens in new tab)
+				128 link Description: https://github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/two-tools/PAIR-01-check-zooma-suggestions.md (opens in new tab), Value: github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/two-tools/PAIR-01-check-zooma-suggestions.md
+				129 link Description: https://github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/zooma/ZOOMA-05-review-and-choose-alternative.md (opens in new tab), Value: github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/zooma/ZOOMA-05-review-and-choose-alternative.md
+			130 button Good response
+				131 image
+			132 button Bad response
+				133 image
+			134 button Contact Ontology Tools support
+		81 text entry area (settable) Ask me, ID: vf-chatbot-standalone-input
+		82 button Send message
+			83 image Send
+		84 container
+			85 text Our chatbot uses AI to assist you. Its use is subject to the 
+			86 link Description: EMBL-EBI Terms of Use, Value: ebi.ac.uk/about/terms-of-use/
+			87 text  and the 
+			88 link Description: Chatbot Disclaimer, Value: ebi.ac.uk/about/embl-ebi-ai-chatbot-disclaimer/
+			89 text . Do not include any personal information about you or others in the chat (for more information, see the
+			90 link Description:  Privacy Notice, Value: wwwdev.ebi.ac.uk/docbot/assets/privacy_notice.pdf
+			91 text ).
+			92 text Learn more in the 
+			93 link Description: DocBot documentation, Value: ebi-wp.gitdocs.ebi.ac.uk/docbot_docs/index.html
+			94 text .
+
+The focused UI element is 81 text entry area (settable) Ask me, ID: vf-chatbot-standalone-input

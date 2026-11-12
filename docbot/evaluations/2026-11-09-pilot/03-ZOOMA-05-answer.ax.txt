@@ -1,0 +1,63 @@
+Browser tab: 1, Title: "DocBot", URL: "https://wwwdev.ebi.ac.uk/docbot/?selected=ontology_tools".
+0 AXWebArea DocBot, URL: wwwdev.ebi.ac.uk/docbot/?selected=ontology_tools
+	1 container docbot-app
+		2 pop up button (collapsed) DocBot DocBot Ontology Tools, Secondary Actions: Expand
+			3 image DocBot
+			4 text DocBot
+			5 text Ontology Tools
+			6 image
+		108 pop up button (collapsed) Description: Chat options, Secondary Actions: Expand
+		109 container
+			110 text You
+			111 image You
+			112 text Zooma suggested a term for my value. Why that term? If it is not right, what else could it have been — and how do I keep a record of what I decide?
+			113 image DocBot
+			114 text DocBot To understand why 
+			115 link Description: Zooma, Value: ebi.ac.uk/spot/zooma
+			116 text  suggested a specific term, click on the value in the “Prediction Type” column of the mapping results table to open the Mapping Provenance window. This window displays what your text was matched against, which often explains the reasoning behind a suggestion. If the suggested term is incorrect, you can find alternatives by clicking the “thumbs down” icon on the row. This opens the “Select Mapping” window, which lists every candidate 
+			117 link Description: Zooma, Value: ebi.ac.uk/spot/zooma
+			118 text  found, ordered by confidence. You can review these candidates in 
+			119 link Description: OLS, Value: ebi.ac.uk/ols4
+			120 text  to check their definitions, synonyms, and hierarchy to determine if a better fit exists. To keep a record of your decisions:
+			121 content list
+				122 container
+					123 AXListMarker • 
+					124 text Do not rely on the website icons:  The thumbs up, thumbs down, and bin icons only change the display on your screen; they are not saved, are not sent to 
+					125 link Description: Zooma, Value: ebi.ac.uk/spot/zooma
+					126 text , and are not reflected in the downloaded results file.
+				127 container
+					128 AXListMarker • 
+					129 text Maintain a working file:  Download your results as a TSV file and add a column to record your decisions, the date, and the settings used. This file serves as your permanent record and allows you to quickly map the same values in the future.
+			130 text Would you like to know more about using the 
+			131 link Description: Zooma, Value: ebi.ac.uk/spot/zooma
+			132 text  API to retrieve mapping provenance?
+			133 button View sources
+				134 text View sources
+				135 image
+			136 button Hide sources
+				137 text Hide sources
+				138 image
+			139 content list
+				140 link Description: https://github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/zooma/ZOOMA-05-review-and-choose-alternative.md (opens in new tab), Value: github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/zooma/ZOOMA-05-review-and-choose-alternative.md
+				141 link Description: https://github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/two-tools/PAIR-01-check-zooma-suggestions.md (opens in new tab), Value: github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/two-tools/PAIR-01-check-zooma-suggestions.md
+			142 button Good response
+				143 image
+			144 button Bad response
+				145 image
+			146 button Contact Ontology Tools support
+		94 text entry area (settable) Ask me, ID: vf-chatbot-standalone-input
+		95 button Send message
+			96 image Send
+		97 container
+			98 text Our chatbot uses AI to assist you. Its use is subject to the 
+			99 link Description: EMBL-EBI Terms of Use, Value: ebi.ac.uk/about/terms-of-use/
+			100 text  and the 
+			101 link Description: Chatbot Disclaimer, Value: ebi.ac.uk/about/embl-ebi-ai-chatbot-disclaimer/
+			102 text . Do not include any personal information about you or others in the chat (for more information, see the
+			103 link Description:  Privacy Notice, Value: wwwdev.ebi.ac.uk/docbot/assets/privacy_notice.pdf
+			104 text ).
+			105 text Learn more in the 
+			106 link Description: DocBot documentation, Value: ebi-wp.gitdocs.ebi.ac.uk/docbot_docs/index.html
+			107 text .
+
+The focused UI element is 94 text entry area (settable) Ask me, ID: vf-chatbot-standalone-input

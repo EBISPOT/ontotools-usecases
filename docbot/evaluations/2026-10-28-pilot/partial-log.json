@@ -1,0 +1,34 @@
+[
+  {
+    "id": "OLS-05",
+    "question": "Is the term I am using still current? If it has been made obsolete, which term should I use instead?",
+    "rating": "thumbs up",
+    "comment": "Accurate against OLS-05: includes obsolete-term search, deprecated status, replacement field and missing-replacement fallback. Small improvement: explicitly tell users to check the replacement definition before switching.",
+    "submissionStatus": "Confirmed by Thank you for your feedback!",
+    "answerSnapshot": "01-OLS-05-answer.ax.txt"
+  },
+  {
+    "id": "OXO-04",
+    "question": "Can I rely on this mapping? Who published it and on what basis — and if OxO inferred it, from which published mappings?",
+    "rating": "thumbs up",
+    "comment": "Accurate against OXO-04 and OXO-08: distinguishes asserted/inferred mappings, identifies Mapping Details and source sets, explains asserted premises and derivation graph, and advises judging the weakest premise.",
+    "submissionStatus": "Confirmed by Thank you for your feedback!",
+    "answerSnapshot": "02-OXO-04-answer.ax.txt"
+  },
+  {
+    "id": "ZOOMA-05",
+    "question": "Zooma suggested a term for my value. Why that term? If it is not right, what else could it have been — and how do I keep a record of what I decide?",
+    "rating": "thumbs up",
+    "comment": "Accurate against ZOOMA-05: explains Prediction Type/Mapping Provenance, alternatives via thumbs down, OLS fallback, and crucially that on-screen decisions are not saved or reflected in TSV downloads. Correctly recommends a separate dated working file.",
+    "submissionStatus": "Confirmed by Thank you for your feedback!",
+    "answerSnapshot": "03-ZOOMA-05-answer.ax.txt"
+  },
+  {
+    "id": "PAIR-03",
+    "question": "OxO says two terms are an exact match. Before I merge data on the strength of that, do the two terms really mean the same thing?",
+    "rating": "thumbs up",
+    "comment": "Accurate against PAIR-03: checks OxO premises/provenance and OLS definitions/hierarchy, distinguishes accept/downgrade/reject, and explicitly says not to merge on downgraded mappings. Correctly treats exact match as a context-dependent publisher claim.",
+    "submissionStatus": "Confirmed by Thank you for your feedback!",
+    "answerSnapshot": "04-PAIR-03-answer.ax.txt"
+  }
+]

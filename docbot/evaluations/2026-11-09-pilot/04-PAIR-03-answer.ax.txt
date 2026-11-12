@@ -1,0 +1,89 @@
+Browser tab: 1, Title: "DocBot", URL: "https://wwwdev.ebi.ac.uk/docbot/?selected=ontology_tools".
+0 AXWebArea DocBot, URL: wwwdev.ebi.ac.uk/docbot/?selected=ontology_tools
+	1 container docbot-app
+		2 pop up button (collapsed) DocBot DocBot Ontology Tools, Secondary Actions: Expand
+			3 image DocBot
+			4 text DocBot
+			5 text Ontology Tools
+			6 image
+		108 pop up button (collapsed) Description: Chat options, Secondary Actions: Expand
+		109 container
+			110 text You
+			111 image You
+			112 text OxO says two terms are an exact match. Before I merge data on the strength of that, do the two terms really mean the same thing?
+			113 image DocBot
+			114 text DocBot To verify if two terms identified as an exact match by 
+			115 link Description: OxO, Value: ebi.ac.uk/spot/oxo
+			116 text  truly have the same meaning, you should use 
+			117 link Description: OLS, Value: ebi.ac.uk/ols4
+			118 text  to compare the terms directly. Follow these steps:
+			119 content list
+				120 container
+					121 AXListMarker • 
+					122 text Examine the 
+					123 link Description: OxO, Value: ebi.ac.uk/spot/oxo
+					124 text  evidence:  In the results table, click the eye icon to open Mapping Details. For asserted mappings, check who published the mapping and how it was made. For inferred mappings, identify the weakest link in the derivation chain.
+				125 container
+					126 AXListMarker • 
+					127 text Compare the terms in 
+					128 link Description: OLS, Value: ebi.ac.uk/ols4
+					129 text :  Click the 
+					130 link Description: OLS, Value: ebi.ac.uk/ols4
+					131 text  link for both the subject and object to open their respective pages. Compare them based on:
+					132 content list
+						133 container
+							134 AXListMarker • 
+							135 text Definition:  Do they describe the same thing, or is one a cause, consequence, part, or special case of the other?
+						136 container
+							137 AXListMarker • 
+							138 text Tree:  Follow the paths upward to ensure they are the same kind of thing (e.g., a disease and a phenotype are not interchangeable).
+						139 container
+							140 AXListMarker • 
+							141 text Synonyms:  Does each term list the other’s label or a close variant?
+						142 container
+							143 AXListMarker • 
+							144 text Children:  Check if one term has children that the other lacks, which may indicate a difference in breadth.
+						145 container
+							146 AXListMarker • 
+							147 text Class Information:  Check if the ontology itself contains a  database_cross_reference  to the other term.
+			148 text After your comparison, you can decide to:
+			149 content list
+				150 container
+					151 AXListMarker • 
+					152 text Accept:  Treat the terms as equivalent if they have the same definition and are the same kind of thing.
+				153 container
+					154 AXListMarker • 
+					155 text Downgrade:  Keep the link as a close, broad, or narrow match if they are related but not identical; do not merge records in this case.
+				156 container
+					157 AXListMarker • 
+					158 text Reject:  Do not use the mapping if the terms mean different things.
+			159 text Would you like to know how to report a mapping you have concluded is incorrect?
+			160 button View sources
+				161 text View sources
+				162 image
+			163 button Hide sources
+				164 text Hide sources
+				165 image
+			166 content list
+				167 link Value: github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/two-tools/PAIR-03-validate-a-mapping.md, Description: https://github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/two-tools/PAIR-03-validate-a-mapping.md (opens in new tab)
+			168 button Good response
+				169 image
+			170 button Bad response
+				171 image
+			172 button Contact Ontology Tools support
+		94 text entry area (settable) Ask me, ID: vf-chatbot-standalone-input
+		95 button Send message
+			96 image Send
+		97 container
+			98 text Our chatbot uses AI to assist you. Its use is subject to the 
+			99 link Description: EMBL-EBI Terms of Use, Value: ebi.ac.uk/about/terms-of-use/
+			100 text  and the 
+			101 link Description: Chatbot Disclaimer, Value: ebi.ac.uk/about/embl-ebi-ai-chatbot-disclaimer/
+			102 text . Do not include any personal information about you or others in the chat (for more information, see the
+			103 link Description:  Privacy Notice, Value: wwwdev.ebi.ac.uk/docbot/assets/privacy_notice.pdf
+			104 text ).
+			105 text Learn more in the 
+			106 link Description: DocBot documentation, Value: ebi-wp.gitdocs.ebi.ac.uk/docbot_docs/index.html
+			107 text .
+
+The focused UI element is 94 text entry area (settable) Ask me, ID: vf-chatbot-standalone-input

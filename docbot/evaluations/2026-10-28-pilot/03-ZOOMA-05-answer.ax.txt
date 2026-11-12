@@ -1,0 +1,60 @@
+Browser tab: 3, Title: "DocBot", URL: "https://wwwdev.ebi.ac.uk/docbot/?selected=ontology_tools".
+0 AXWebArea DocBot, URL: wwwdev.ebi.ac.uk/docbot/?selected=ontology_tools
+	1 container docbot-app
+		2 pop up button (collapsed) DocBot DocBot Ontology Tools, Secondary Actions: Expand
+			3 image DocBot
+			4 text DocBot
+			5 text Ontology Tools
+			6 image
+		88 pop up button (collapsed) Description: Chat options, Secondary Actions: Expand
+		89 container
+			90 text You
+			91 image You
+			92 text Zooma suggested a term for my value. Why that term? If it is not right, what else could it have been — and how do I keep a record of what I decide?
+			93 image DocBot
+			94 text DocBot Zooma suggests terms based on similarity of meaning (often via language models) or by reusing mappings previously curated by EMBL-EBI data resources. To understand why a specific term was suggested, click on the value in the 
+			95 text Prediction Type
+			96 text  column of the Results table to open the 
+			97 text Mapping Provenance
+			98 text  window, which displays what your text was matched against. If the suggestion is incorrect, you can find alternatives by clicking the 
+			99 text thumbs down
+			100 text  icon on the row. This opens the “Select Mapping” window, which lists all candidates Zooma can find, ranked by confidence. If none of these are correct, you may need to search for a term manually using OLS. To keep a record of your decisions:
+			101 content list
+				102 container
+					103 AXListMarker • 
+					104 text Do not rely on the website icons:  The thumbs up, thumbs down, and bin icons only change the display on your screen. They are not saved, they are not sent to Zooma, and they are not reflected in the downloaded results file.
+				105 container
+					106 AXListMarker • 
+					107 text Maintain a working file:  Download your results as a TSV file and add a column to record your final decisions, including the term label, identifier, and IRI for any replacements you select. Keeping this file, along with the date and settings used, serves as your permanent record and allows you to map the same values more efficiently in the future.
+			108 text Would you like to know more about how to use OLS to verify if a suggested term is appropriate for your data?
+			109 button View sources
+				110 text View sources
+				111 image
+			112 button Hide sources
+				113 text Hide sources
+				114 image
+			115 content list
+				116 link Value: github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/zooma/ZOOMA-06-reuse-curated-mappings.md, Description: https://github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/zooma/ZOOMA-06-reuse-curated-mappings.md (opens in new tab)
+				117 link Description: https://github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/two-tools/PAIR-01-check-zooma-suggestions.md (opens in new tab), Value: github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/two-tools/PAIR-01-check-zooma-suggestions.md
+				118 link Description: https://github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/zooma/ZOOMA-05-review-and-choose-alternative.md (opens in new tab), Value: github.com/EBISPOT/ontotools-usecases/blob/dev/use-cases/zooma/ZOOMA-05-review-and-choose-alternative.md
+			119 button Good response
+				120 image
+			121 button Bad response
+				122 image
+			123 button Contact Ontology Tools support
+		74 text entry area (settable) Ask me, ID: vf-chatbot-standalone-input
+		75 button Send message
+			76 image Send
+		77 container
+			78 text Our chatbot uses AI to assist you. Its use is subject to the 
+			79 link Description: EMBL-EBI Terms of Use, Value: ebi.ac.uk/about/terms-of-use/
+			80 text  and the 
+			81 link Description: Chatbot Disclaimer, Value: ebi.ac.uk/about/embl-ebi-ai-chatbot-disclaimer/
+			82 text . Do not include any personal information about you or others in the chat (for more information, see the
+			83 link Description:  Privacy Notice, Value: wwwdev.ebi.ac.uk/docbot/assets/privacy_notice.pdf
+			84 text ).
+			85 text Learn more in the 
+			86 link Description: DocBot documentation, Value: ebi-wp.gitdocs.ebi.ac.uk/docbot_docs/index.html
+			87 text .
+
+The focused UI element is 74 text entry area (settable) Ask me, ID: vf-chatbot-standalone-input
